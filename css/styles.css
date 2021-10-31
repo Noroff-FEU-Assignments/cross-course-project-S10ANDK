@@ -3,7 +3,6 @@ body {
     font-size: 1em;
     font-weight: normal;
     color: #113340;
-    border: 0px;
     min-height: 100vh;
     margin: 0px;
     display: grid;
@@ -64,13 +63,10 @@ header {
 nav {
     background-color: #113340;
     text-align: center;
-    width: 100%;
-    margin: none;
 }
 
 nav li {
     display: inline;
-    margin: 0px;
 }
 
 nav a:hover {
@@ -79,7 +75,6 @@ nav a:hover {
 }
 
 nav ul {
-    padding: 0px;
     margin: 0px;
 }
 
