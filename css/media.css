@@ -1,0 +1,77 @@
+@media (min-width: 650px) {
+    body {
+        background: none;
+    }
+
+    header {
+        background-color: #FFDD15;
+        margin-top: 0;
+    }
+
+    .header-items_top {
+        display: flex;
+        align-items: center;
+        padding: 22px 0px;
+    }
+    
+    .header-items_top div {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .logo img {
+        width: 250px;
+    }
+    
+    .checkout-button {
+        visibility: visible;
+    }
+    
+    .checkout-button {
+        padding-top: 20px;
+        transform: translateX(-50px);
+    }
+    
+    .checkout-button span{
+        display: block;
+        color: #113340;
+    }
+
+    .home_page {
+        background-image: url(../assets/background-home_page.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: none;
+    }
+
+    /* Home page specific media querys */
+    nav ul {
+        display: block;
+    }
+
+    .gender-selection-small {
+        max-width: 300px;
+        display: flex;
+        flex-direction: row;
+        margin: 50px auto;
+    }
+    
+    .gender-selection-small > * {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .gender-selection-small span {
+        display: block;
+        color: #113340;
+        font-style: bold;
+    }
+    
+    .small-gender_images {
+        width: 50%;
+    }
+    
+    .introduction-home {
+        margin-top: 100px;
+    }
+}

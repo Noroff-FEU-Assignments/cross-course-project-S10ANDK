@@ -1,0 +1,52 @@
+nav ul,
+.gender-selection-small {
+    display: none;
+}
+
+header {
+    background-color: transparent;
+    margin-top: 120px;
+}
+
+.checkout-button {
+    visibility: hidden;
+}
+
+.introduction-home {
+    text-align: center;
+    text-justify: inter-word;
+    margin: 40px auto 0px;
+    font-size: 1.5em;
+}
+
+#content1::after {
+    content: "\a";
+    white-space: pre;
+}
+
+.home-page_buttons {
+    text-align: center;
+    margin: 120px auto;
+}
+
+.browse {
+    margin-bottom: 50px;
+}
+
+.home-about_button {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cta-browse {
+    background-color: #FFDD15;
+    color: #113340;
+    font-size: 1.5em;
+    padding: 3px 40px;
+    border-radius: 5px;
+}
+
+.cta-browse a:hover {
+    background-color: #113340;
+    color: #FCFEFC;
+}
