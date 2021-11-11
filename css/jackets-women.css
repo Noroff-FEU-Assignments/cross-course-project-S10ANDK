@@ -36,8 +36,13 @@
 }
 
 .cta-show_item {
+    font-size: 1em;
     background-color: #FFDD15;
     color: #113340;
-    width: 120px;
-    transform:translateY(50px)
+    width: 100px;
+    transform: translateY(50px)
+}
+
+.products p {
+    font-size: 1em;
 }

@@ -38,6 +38,10 @@
 .cta-show_item {
     background-color: #FFDD15;
     color: #113340;
-    width: 120px;
+    width: 100px;
     transform: translateY(50px)
+}
+
+.products p {
+    font-size: 1em;
 }

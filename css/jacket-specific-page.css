@@ -18,10 +18,6 @@
     border-radius: 5px;
 }
 
-.jacket-specific_image {
-
-}
-
 .similar-items_image {
     width: 120px;
     height: 160px;
@@ -40,7 +36,7 @@ h3 {
     margin: 0 auto;
 }
 
-p {
+.jacket-specific_description {
     margin: 0;
 }
 
@@ -93,8 +89,4 @@ p {
 .jacket-specific p,
 .jacket-specific h2 {
     max-width: 300px;
-}
-
-footer {
-    padding: 15px 0px;
 }
