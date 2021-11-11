@@ -1,3 +1,12 @@
+@media (min-width: 450px) {
+    .similar-items_image {
+        width: 140px;
+        height: 180px;
+        object-fit: cover;
+        margin: 5px auto;
+    }
+}
+
 @media (min-width: 650px) {
     body {
         background-image: url(../assets/background.jpg);
@@ -21,8 +30,20 @@
         font-size: 1em;
     }
 
+    .checkout-button a:hover {
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        color: #113340;
+    }
+
     .nav-cta {
         width: 120px;
+    }
+
+    nav a:hover {
+        background-color: var(--color-nav-hover);
+        color: var(--color-nav-a-hover);
+        transition: 0.4s ease;
     }
 
     .main-content,
@@ -33,10 +54,10 @@
     }
 
     .main-content {
-       padding-bottom: bottom; 
-    }
-    
-    /* Home page specific media querys */
+        padding-bottom: bottom; 
+        border-radius: 0 0 5px 5px;
+     }
+    /* Home page media querys */
     header {
         background-color: #FFDD15;
         margin-top: 0;
@@ -97,11 +118,11 @@
     .cta-browse:hover,
     .cta-about:hover,
     .cta-contact:hover {
-        box-shadow: 0px 0px 10px 5px #888888;
+        box-shadow: 0px 0px 10px 5px #D3D3D3;
         transition: 0.3s ease;
     }
 
-    /* Gender selection page */
+    /* Gender selection page media querys */
     .gender-selection-main {
         max-width: 1000px;
         margin: 0px auto;
@@ -125,7 +146,7 @@
         text-underline-offset: 5px;
     }
 
-    /* Jacket pages */
+    /* Jacket pages media querys */
     .product-list {
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
@@ -135,16 +156,51 @@
         grid-row: 1;
     }
 
-    .jackets-listed {
+    .jackets-listed_image {
         width: 100%;
         height: 350px;
         object-fit: cover;
         border-radius: 5px;
     }
 
-    .cta-show_item:hover {
-        box-shadow: 0px 0px 10px 3px #888888;
+    .cta-show_item:hover,
+    .buy-now_button:hover,
+    .add-to-cart_button:hover {
+        box-shadow: 0px 0px 10px 7px #D3D3D3;
         transition: 0.3s ease;
     }
+}
 
+@media (min-width: 900px) {
+    /* Jacket specific page media querys */
+    .jacket-specific-container {
+        flex-direction: row;
+        padding-top: 30px;
+    }
+
+    .add-to-cart_button {
+        position: absolute;
+        transform: translateX(40px);
+    }
+
+    .buy-now_button {
+        position: absolute;
+        transform: translate(180px, 10px);
+
+    }
+
+    .similar-items-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .jacket-specific {
+        margin: 0;
+    }
+
+    .jacket-specific p,
+    .jacket-specific h2 {
+        max-width: 300px;
+        text-align: left;
+        margin-left: 50px;
+    }
 }

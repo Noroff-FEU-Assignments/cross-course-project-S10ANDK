@@ -34,10 +34,11 @@ h2 {
 }
 
 h3 {
+    color: #113340;
     font-family: Tahoma, Helvetica, Verdana, sans-serif;
     font-size: 1em;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     text-align: left;
     text-decoration: none;
     letter-spacing: 0.5px;
@@ -46,7 +47,7 @@ h3 {
 
 .price {
     font-family: Tahoma, Helvetica, Verdana, sans-serif;
-    font-size: 1em;
+    font-size: 0.9em;
     font-style: normal;
     text-align: left;
     text-decoration: none;
@@ -60,6 +61,11 @@ a {
     font-style: normal;
     text-decoration: none;
     color: #FCFEFC;
+}
+
+p {
+    color: #113340;
+    line-height: 22px;
 }
 
 header {
@@ -109,12 +115,6 @@ nav li {
     display: inline;
 }
 
-nav a:hover {
-    background-color: var(--color-nav-hover);
-    color: var(--color-nav-a-hover);
-    transition: 0.4s ease;
-}
-
 nav ul {
     margin: 0px;
     padding: 0px;
@@ -123,12 +123,6 @@ nav ul {
 .active {
     text-decoration: underline;
     text-underline-offset: 5px;
-}
-
-.checkout-button a:hover {
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    color: #113340;
 }
 
 .cta {  
@@ -155,13 +149,13 @@ nav ul {
 .main-headings{
     background-color: #FCFEFC;
     padding: 5px 40px 40px;
-    margin: 0 8%;
+    margin: 0 5%;
 } 
 
 .main-content {
     background-color: #FCFEFC;
     padding: 5px 40px 20px ;
-    margin: 0 8% 40px;
+    margin: 0 5% 40px;
     border-radius: 0 0 5px 5px;
 }
 

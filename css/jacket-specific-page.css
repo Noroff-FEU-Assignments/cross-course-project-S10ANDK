@@ -1,0 +1,100 @@
+.main-headings {
+    padding-bottom: 20px;
+}
+
+.jacket-specific-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.jacket-specific {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.jacket-specific_image,
+.similar-items_image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.jacket-specific_image {
+
+}
+
+.similar-items_image {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    margin: 5px auto;
+}
+
+h2 {
+    font-size: 1.3em;
+    margin: 0px auto 20px;
+}
+
+h3 {
+    font-size: 00.8em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+p {
+    margin: 0;
+}
+
+.price {
+    font-size: 1em;
+    margin: 20px 0; 
+}
+
+.price span {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.similar-items_price {
+    font-size: 0.7em;
+    margin: 0 auto 10px;
+}
+
+.add-to-cart_button {
+    background-color: #FFDD15;
+    color: #113340;
+    margin: 10px auto;
+}
+
+.buy-now_button {
+    background-color: #FF6254;
+    color: #fcfefc;
+}
+
+.similar-items-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 5px;
+    gap: 15px;
+}
+
+.similar-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+}
+
+.similar-items-container h2 {
+    grid-row: 1;
+    grid-column: -1/1;
+    margin-top: 20px;
+}
+
+.jacket-specific p,
+.jacket-specific h2 {
+    max-width: 300px;
+}
+
+footer {
+    padding: 15px 0px;
+}
