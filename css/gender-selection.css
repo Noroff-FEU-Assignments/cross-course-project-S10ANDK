@@ -1,0 +1,22 @@
+.gender-selection {
+    position: relative;
+    margin: 0;
+}
+
+.gender-selection-link h1 {
+    font-weight: lighter;
+    font-size: 1.8em;
+    color: #FCFEFC;
+    position: absolute;
+    top: 100px;
+    left: 10px;
+}
+
+.gender-selection-images {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin: 0px auto;
+    padding: 0;
+}

@@ -1,0 +1,43 @@
+.product-list {
+    display: grid;
+    grid-template-columns: (1fr);
+    gap: 20px;
+}
+
+.jackets-listed {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.products a {
+    grid-column: -1/1;
+}
+
+.products h3, .products p {
+    grid-column: 1;
+    margin: 5px 0px 0px 10px;
+}
+
+.products .cta-show_item {
+    grid-row: 2/4;
+    grid-column: 2;
+    margin-top: 7px;
+    position: relative;
+    transform: translateX(5px);
+}
+
+.cta-show_item {
+    background-color: #FFDD15;
+    color: #113340;
+    width: 120px;
+    transform:translateY(50px)
+}
