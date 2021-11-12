@@ -85,28 +85,35 @@
         visibility: visible;
     }
 
-    .gender-selection-small {
+    .container-gender-selection-small {
         max-width: 300px;
         display: flex;
         flex-direction: row;
         margin: 50px auto 30px;
     }
     
-    .gender-selection-small > * {
+    .container-gender-selection-small > * {
         flex: 1;
         text-align: center;
     }
     
-    .gender-selection-small span {
+    .container-gender-selection-small span {
         display: block;
         color: #113340;
         font-style: bold;
     }
     
     .small-gender_images {
-        width: 70%;
+        width: 130px;
+        height: 100px;
+        border-radius: 20px;
+        transition: transform 2s;
     }
-    
+
+    .small-gender_images:hover {
+        transform: scale(1.1);
+    }
+
     .introduction-home {
         margin-top: 0px;
     }
@@ -127,24 +134,51 @@
     .gender-selection-main {
         max-width: 1000px;
         margin: 0px auto;
+        display: flex;
+    }
+
+    .gender-selection {
+        flex: 1;
+        overflow: hidden;
     }
 
     .gender-selection-images {
-        height: 400px;
-    }
-
-    .gender-selection-images_men {
-        border-radius: 0 0 5px 5px;
-    }
-
-    .gender-selection-link h1 {
-        top: 140px;
-        left: 40px;
+        height: 100%;
+        transition: transform 2s;
     }
 
     .gender-selection h1:hover {
         text-decoration: underline;
         text-underline-offset: 5px;
+    }
+
+    .gender-selection-link a {
+        margin: 0;
+    }
+
+    .gender-selection-link h1 {
+        background-color: #D6DBDC;
+        font-weight: 600;
+        font-size: 2em;
+        color: #113340;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        margin: 0;
+        width: 100px;
+    }
+
+    #women_h1 {
+        padding: 20px 80px 20px 40px;
+        
+    }
+
+    #men_h1 {
+        padding: 20px 40px 20px 40px;
+    }
+
+    .gender-selection-images:hover {
+        transform: scale(1.2);
     }
 
     /* Jacket pages media querys */
@@ -169,7 +203,7 @@
         margin: 5px 0px 0px;
     }
 
-    /* About page */
+    /* About page media querys */
     .main-content {
         max-width: 1000px;
         margin: 0px auto;
