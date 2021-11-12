@@ -7,11 +7,12 @@
     <link href="../css/styles.css" rel="stylesheet">
     <link href="../css/checkout-success.css" rel="stylesheet">
     <link href="../css/media.css" rel="stylesheet">
+    <link href="../css/media-checkout.css" rel="stylesheet">
     <title>Rainydays | Welcome</title>
 </head>
 <body>
     <header>
-        <section class="header-items_top">
+        <div class="header-container">
             <div class="back_button">
                 <a href="#"><img src="assets/Back_Button.png" alt="Back button"></a>
             </div>
@@ -21,7 +22,7 @@
             <div class="checkout-button">
                 <a href="checkout.html"><img src="../assets/cart.png" alt="checkout icon"><span>Checkout</span></a>
             </div>
-        </section>
+        </div>
         <nav>
             <ul>
                 <li><a href="gender-selection.html" class="cta nav-cta">Jackets</a></li>
@@ -31,7 +32,14 @@
         </nav>
     </header>
     <main>
-        <h1>Work in progress</h1>
+        <section class="main-content">
+            <h1 id="checkout-success_h1">Checkout Success!</h1>
+            <div>
+                <img src="../assets/check-mark.png" class="check-mark_icon" alt="Check mark icon">
+            </div>
+            <p class="checkout-success_text">You will soon receive an order confirmation.</p>
+            <a href="../html/gender-selection.html" class="cta continue-shopping_button">Continue shopping</a>
+        </section>
     </main>
     <footer>
         <p>Copyright©</p>

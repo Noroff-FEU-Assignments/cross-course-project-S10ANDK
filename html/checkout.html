@@ -7,11 +7,12 @@
     <link href="../css/styles.css" rel="stylesheet">
     <link href="../css/checkout.css" rel="stylesheet">
     <link href="../css/media.css" rel="stylesheet">
+    <link href="../css/media-checkout.css" rel="stylesheet">
     <title>Rainydays | Welcome</title>
 </head>
 <body>
     <header>
-        <section class="header-items_top">
+        <div class="header-container">
             <div class="back_button">
                 <a href="#"><img src="assets/Back_Button.png" alt="Back button"></a>
             </div>
@@ -19,9 +20,9 @@
                 <a href="../index.html"><img src="../assets/rainydays_Logo.png" class="rainydays-logo_image" alt="Rainydays logo"></a>
             </div>
             <div class="checkout-button">
-                <a href="checkout.html"><img src="../assets/cart.png" alt="checkout icon"><span>Checkout</span></a>
+                <a href="checkout.html"><img src="../assets/cart.png" class="cart-icon" alt="checkout icon"><span>Cart</span></a>
             </div>
-        </section>
+        </div>
         <nav>
             <ul>
                 <li><a href="gender-selection.html" class="cta nav-cta">Jackets</a></li>
@@ -31,7 +32,28 @@
         </nav>
     </header>
     <main>
-        <h1>Work in progress</h1>
+        <section class="main-content">
+            <h1>Checkout</h1>
+            <div class="checkout_items">
+                <img src="../images/jacket-men_01.jpg" class="checkout_image" alt="Jacket model 01">
+                <div>                
+                    <h2>Price: £99.00</h2>
+                    <p class="jacket-model">Jacket model 01</p>
+                    <p class="quantity">Quantity: 1</p>
+                </div>
+            </div>
+            <div class="checkout_items">
+                <img src="../images/jacket-woman_02.jpg" class="checkout_image" alt="Jacket model 02">
+                <div>                
+                    <h2>Price: £99.00</h2>
+                    <p class="jacket-model">Jacket model 02</p>
+                    <p class="quantity">Quantity: 1</p>
+                </div>
+            </div>
+            <p id="shipping-info">*Free shipping (more than £100.00)</p>
+            <p id="total-cost">Total cost: <span>£198.00<span</p>
+            <a href="../html/checkout-success.html" class="cta pay-now_button">Pay Now</a>
+        </section>
     </main>
     <footer>
         <p>Copyright©</p>

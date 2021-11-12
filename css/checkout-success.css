@@ -1,0 +1,37 @@
+header {
+    background-color: transparent;
+    margin-top: 20px;
+}
+
+nav ul {
+    display: none;
+}
+
+.checkout-button {
+    visibility: hidden;
+}
+
+.main-content {
+    border-radius: 5px;
+}
+
+.main-content div {
+    text-align: center;
+    margin: 30px auto 0px;
+}
+
+.check-mark_icon {
+    width: 60px;
+    height: auto;
+}
+
+.checkout-success_text {
+    text-align: center;
+}
+
+.continue-shopping_button {
+    background-color: #FFDD15;
+    color: #113340;
+    width: 200px;
+    margin: 40px auto 20px;
+}

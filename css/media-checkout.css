@@ -1,0 +1,24 @@
+@media (min-width: 650px) {
+    body {
+        background: none;
+        background-color: #D6DBDC;
+    }
+
+    .main-content {
+        max-width: 700px;
+        border-radius: 5px;
+    }
+
+    header {
+        background-color: transparent;
+        margin-top: 20px;
+    }
+    
+    nav ul {
+        display: none;
+    }
+
+    .checkout-button {
+        visibility: hidden;
+    }
+}
