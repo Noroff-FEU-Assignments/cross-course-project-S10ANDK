@@ -1,0 +1,46 @@
+input, 
+textarea {
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+    margin: 10px 10px 10px 0px;
+    padding: 10px;
+    max-width: 213px;
+}
+
+.contact {
+    text-align: center;
+    margin: 20px 5%;
+    border-radius: 5px;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+textarea {
+    height: 45%;
+}
+
+.forms-container {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+}
+
+.forms-container > * {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-email {
+    margin-bottom: 40px;
+}
+
+.cta-send {
+    border: 0px;
+    background: #FF6254;
+    line-height: 19px;
+    font-weight: 600;
+    margin-top: 20px
+}

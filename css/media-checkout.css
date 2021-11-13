@@ -21,4 +21,8 @@
     .checkout-button {
         visibility: hidden;
     }
+
+    .logo {
+        margin-bottom: 14px;
+    }
 }

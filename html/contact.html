@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <section class="header-items_top">
+        <div class="header-container">
             <div class="back_button">
                 <a href="#"><img src="assets/Back_Button.png" alt="Back button"></a>
             </div>
@@ -19,9 +19,9 @@
                 <a href="../index.html"><img src="../assets/rainydays_Logo.png" class="rainydays-logo_image" alt="Rainydays logo"></a>
             </div>
             <div class="checkout-button">
-                <a href="checkout.html"><img src="../assets/cart.png" class="cart-icon" alt="checkout icon"><span>Cart</span></a>
+                <a href="checkout.html"><img src="../assets/cart.png" class="cart-icon" alt="Checkout icon"><span>Cart</span></a>
             </div>
-        </section>
+        </div>
         <nav>
             <ul>
                 <li><a href="gender-selection.html" class="cta nav-cta">Jackets</a></li>
@@ -30,8 +30,28 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Work in progress</h1>
+    <main class="main-content contact">
+        <h1>Contact Us</h1>
+        <form method="post">
+            <div class="forms-container"> 
+                <form method="POST">               
+                    <section class="name-email">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="name">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email">
+                    <div>
+                        <input type="checkbox" name="newsletter" id="newsletter">
+                        <label for="newsletter">Sign up for our newsletter.</label>
+                    </div>
+                    </section>
+                    <section class="message">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" cols="30"></textarea>
+                        <input type="submit" value="Send" class="cta cta-send">
+                    </section>
+                </form>
+            </div>
     </main>
     <footer>
         <p>Copyright©</p>
