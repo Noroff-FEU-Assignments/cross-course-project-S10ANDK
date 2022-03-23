@@ -44,27 +44,29 @@
     </header>
     <main>
         <section class="main-content">
-            <h1 class="checkout_h1">Checkout</h1>
-            <div class="checkout_items">
-                <img src="../images/jacket-men_01.jpg" class="checkout_image" alt="Jacket model 01">
-                <div>                
-                    <h2>Price: £99.00</h2>
-                    <p class="jacket-model">Jacket model 01</p>
-                    <p class="quantity">Quantity: 1</p>
+            <div class="cart-container">
+                <h1 class="checkout_h1">Checkout</h1>
+                <div class="checkout_items">
+                    <img src="../images/jacket-men_01.jpg" class="checkout_image" alt="Jacket model 01">
+                    <div>                
+                        <h2>Price: £99.00</h2>
+                        <p class="jacket-model">Jacket model 01</p>
+                        <p class="quantity">Quantity: 1</p>
+                    </div>
                 </div>
-            </div>
-            <div class="checkout_items">
-                <img src="../images/jacket-woman_02.jpg" class="checkout_image" alt="Jacket model 02">
-                <div>                
-                    <h2>Price: £99.00</h2>
-                    <p class="jacket-model">Jacket model 02</p>
-                    <p class="quantity">Quantity: 1</p>
+                <div class="checkout_items">
+                    <img src="../images/jacket-woman_02.jpg" class="checkout_image" alt="Jacket model 02">
+                    <div>                
+                        <h2>Price: £99.00</h2>
+                        <p class="jacket-model">Jacket model 02</p>
+                        <p class="quantity">Quantity: 1</p>
+                    </div>
                 </div>
+                <p id="shipping-info">*Free shipping (more than £100.00)</p>
+                <p id="total-cost">Total cost: <span>£198.00<span</p>
+                <button type="button" class="cta checkout-now_button">Checkout now</button>
             </div>
-            <p id="shipping-info">*Free shipping (more than £100.00)</p>
-            <p id="total-cost">Total cost: <span>£198.00<span</p>
-            <a href="../html/checkout-success.html" class="cta checkout-now_button">Checkout now</a>
-            <h3 class="form-header">Billing details</h2>
+            <h3 class="form-header">Billing Details</h2>
             <form class="billing-form">
                 <div>
                     <label for="name">Full name</label>
@@ -127,6 +129,7 @@
                     <input type="checkbox" name="newsletter" id="newsletter">
                     <label for="newsletter">Sign up for our newsletter.</label>
                 </div>
+                <button type="button" class="cta checkout-nav">Next: Card information</button>
                 <h3 class="form-header">Card Information</h3>
                 <div class="card-information-container">
                     <div>
@@ -134,13 +137,6 @@
                         <input type="tel" id="card-number" name="card-number">
                             <div class="form-error-message" id="cardNumberError">
                                 Please enter a valid card number
-                            </div>
-                    </div>
-                    <div id="security-code">
-                        <label for="security-code">Security code</label>
-                        <input type="tel" id="security-code" name="security-code">
-                            <div class="form-error-message" id="securityCodeError">
-                                Please enter a valid security code (3 digits)
                             </div>
                     </div>
                     <div>
@@ -178,8 +174,15 @@
                                 Please select correct year
                             </div>
                     </div>
+                    <div id="security-code">
+                        <label for="security-code">Security code</label>
+                        <input type="tel" id="security-code" name="security-code">
+                            <div class="form-error-message" id="securityCodeError">
+                                Please enter a valid security code (3 digits)
+                            </div>
+                    </div>
                 </div>
-                <button type="submit" class="cta purchase_button">Confirm purchase</a>
+                <button type="submit" class="cta purchase_button">Confirm purchase</button>
             </form>
         </section>
     </main>

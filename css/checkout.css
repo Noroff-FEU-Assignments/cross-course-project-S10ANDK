@@ -76,17 +76,35 @@ h2 {
 
 .checkout-now_button,
 .purchase_button {
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: 600;
     display: block;
     width: 250px;
+    height: 60px;
     background-color: #FF6254;
-    border-radius: 20px;
+    border-radius: 30px;
     margin: 30px auto 20px;
+    transition: .4 ease-in-out;
 }
 
-.purchase_button {
+.checkout-nav {
+    font-size: 1.3rem;
+    width: 270px;
+    height: 60px;
+    border: none;
+    border-radius: 30px;
+    margin: 50px auto;
+}
 
+.purchase_button,
+.checkout-now_button {
+    background-color: #54C452;
+    border: none;
+    margin: 60px auto;
+}
+
+.checkout-now_button {
+    background-color: #FF6254;
 }
 
 .billing-form div {

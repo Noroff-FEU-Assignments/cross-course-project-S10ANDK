@@ -127,8 +127,11 @@
     }
 
     .cta-sale,
-    .small-gender_images:hover,
     .cta-show_item:hover {
+        transform: scale(1.05);
+    }
+
+    .small-gender_images:hover {
         transform: scale(1.1);
     }
 
@@ -143,10 +146,18 @@
 
     .checkout-now_button:hover {
         background-color: #941f15;
+        transform: scale(1.01);
+        cursor: pointer;
     }
 
-    .purchase_button:hover {
+    .checkout-nav:hover {
+        background-color: #1C5166;
+    }
+
+    .purchase_button:hover,
+    .checkout-nav:hover {
         cursor: pointer;
+        transform: scale(1.01);
     }
 
     .continue-shopping_button:hover,
@@ -159,6 +170,10 @@
     .cta-about:hover,
     .cta-contact:hover {
         transform: scale(1.1);
+    }
+
+    select {
+        cursor: pointer;
     }
 
     /* Gender selection page media querys */
