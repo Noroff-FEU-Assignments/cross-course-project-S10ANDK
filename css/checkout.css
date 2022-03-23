@@ -11,6 +11,10 @@ nav ul {
     visibility: hidden;
 }
 
+main {
+    margin-bottom: 100px;
+}
+
 .main-content {
     border-radius: 5px;
 }
@@ -42,6 +46,12 @@ h2 {
     font-size: 1em;
 }
 
+.form-header {
+    text-align: center;
+    margin: 50px auto 40px;
+    font-size: 1.5em;
+}
+
 .jacket-model {
     margin: 0px;
 }
@@ -64,8 +74,48 @@ h2 {
     font-weight: 600;
 }
 
-.pay-now_button {
+.checkout-now_button,
+.purchase_button {
+    font-size: 25px;
+    font-weight: 600;
     display: block;
+    width: 250px;
     background-color: #FF6254;
+    border-radius: 20px;
     margin: 30px auto 20px;
+}
+
+.purchase_button {
+
+}
+
+.billing-form div {
+    margin: 30px auto;
+}
+
+input, 
+textarea {
+    display: block;
+    width: 100%;
+    min-width: 10%;
+    max-width: 50%; 
+}
+
+#newsletter {
+    display: inline;
+}
+
+form {
+    max-width: 65%;
+    margin: auto;
+}
+
+#security-code {
+    width: 50%;
+    margin: 10px 0px;
+}
+
+#year,
+#month {
+    display: block;
 }

@@ -63,7 +63,124 @@
             </div>
             <p id="shipping-info">*Free shipping (more than £100.00)</p>
             <p id="total-cost">Total cost: <span>£198.00<span</p>
-            <a href="../html/checkout-success.html" class="cta pay-now_button">Pay Now</a>
+            <a href="../html/checkout-success.html" class="cta checkout-now_button">Checkout now</a>
+            <h3 class="form-header">Billing details</h2>
+            <form class="billing-form">
+                <div>
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="name">
+                        <div class="form-error-message" id="fullNameError">
+                            Please enter your full name
+                        </div>
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email">
+                    <div class="form-error-message" id="emailError">
+                        E-mail address is not valid
+                    </div>
+                </div>
+                <div>
+                    <div id="countries-message">
+                        <p>We only ship to a select few countries.</p> 
+                    </div>
+                    <label for="country">Country</label>
+                    <select id="country" id="country" name="country">
+                        <option value="Norway">Norway</option>
+                        <option value="Norway">Sweden</option>
+                        <option value="Norway">Denmark</option>
+                        <option value="Norway">Finland</option>
+                        <option value="Norway">Iceland</option>
+                        <option value="Norway">England</option>
+                        <option value="Norway">Wales</option>
+                        <option value="Norway">Ireland</option>
+                        <option value="Norway">Northern Ireland</option>
+                        <option value="Norway">Scotland</option>
+                        <option value="Norway">South Africa</option>
+                    </select>
+                        <div class="form-error-message" id="zipError">
+                            Please select a country
+                        </div>
+                </div>
+                <div class="form-state-container">
+                    <label for="state">State/County</label>
+                    <input type="text" id="state" name="state">
+                        <div class="form-error-message" id="stateError">
+                            Please enter a state/county
+                        </div>
+                </div>
+                <div>
+                    <label for="zip">Zip/Postal code</label>
+                    <input type="email" id="zip" name="zip">
+                    <div class="form-error-message" id="zipError">
+                        Please enter your zip or postal code
+                    </div>
+                </div>
+                <div>
+                    <label for="number">Mobile number</label>
+                    <input type="tel" id="number" name="number">
+                    <div class="form-error-message" id="numberError">
+                        Mobile number is not valid
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="newsletter" id="newsletter">
+                    <label for="newsletter">Sign up for our newsletter.</label>
+                </div>
+                <h3 class="form-header">Card Information</h3>
+                <div class="card-information-container">
+                    <div>
+                        <label for="card-number">Card number</label>
+                        <input type="tel" id="card-number" name="card-number">
+                            <div class="form-error-message" id="cardNumberError">
+                                Please enter a valid card number
+                            </div>
+                    </div>
+                    <div id="security-code">
+                        <label for="security-code">Security code</label>
+                        <input type="tel" id="security-code" name="security-code">
+                            <div class="form-error-message" id="securityCodeError">
+                                Please enter a valid security code (3 digits)
+                            </div>
+                    </div>
+                    <div>
+                        <label for="month">Month</label>
+                        <select id="month" id="month" name="month">
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                            <div class="form-error-message" id="monthError">
+                                Please select correct month
+                            </div>
+                    </div>
+                    <div>
+                        <label for="year">Year</label>
+                        <select id="year" id="year" name="year">
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                        </select>
+                            <div class="form-error-message" id="yearError">
+                                Please select correct year
+                            </div>
+                    </div>
+                </div>
+                <button type="submit" class="cta purchase_button">Confirm purchase</a>
+            </form>
         </section>
     </main>
     <footer>

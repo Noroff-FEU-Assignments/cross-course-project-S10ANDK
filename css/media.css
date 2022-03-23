@@ -141,13 +141,19 @@
         margin: 80px auto;
     }
 
+    .checkout-now_button:hover {
+        background-color: #941f15;
+    }
+
+    .purchase_button:hover {
+        cursor: pointer;
+    }
+
     .continue-shopping_button:hover,
-    .pay-now_button:hover,
     .cta-browse:hover,
     .cta-about:hover,
     .cta-contact:hover {
-        transition: 0.3s ease;
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 
     .cta-about:hover,
@@ -207,14 +213,12 @@
     }
 
     /* Jacket pages media querys */
-    .cta-show_item:hover {
-        transition: 0.3s ease;
+    .buy-now_button:hover {
+        background-color: #941f15;
     }
 
-    .buy-now_button:hover,
     .add-to-cart_button:hover {
-        box-shadow: 0px 0px 10px 7px #D3D3D3;
-        transition: 0.3s ease;
+        background-color: #FFEA03;
     }
 
     .jackets-listed_image {
@@ -255,7 +259,6 @@
     .forms-container {
         margin: 20px 100px;
     }
-
 
     /* Checkout pages media querys */
     .checkout_items,
