@@ -68,6 +68,13 @@
                             <input type="checkbox" name="newsletter" id="newsletter">
                             <label for="newsletter">Sign up for our newsletter.</label>
                         </div>
+                        <div>
+                            <label for="subject">Subject</label>
+                            <input type="subject" id="subject" name="subject">
+                            <div class="form-error-message" id="subjectError">
+                                Please include a subject line
+                            </div>
+                        </div>
                         <div class="message">
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="6" cols="30"></textarea>
@@ -81,6 +88,7 @@
     <footer>
         <p>Copyright©</p>
     </footer>
+    <script src="../js/components/validation.js"></script>
     <script src="../js/contact.js"></script>
 </body>
 </html>

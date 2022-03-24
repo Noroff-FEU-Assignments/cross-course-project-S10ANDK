@@ -11,7 +11,7 @@ const submitButton = document.querySelector("#submitButton");
 function validateContactForm() {
   event.preventDefault();
 
-  if (checkCharacterLength(fullName.value, 0) === true) {
+  if (checkCharacterLength(fullName.value, 1) === true) {
     fullNameError.style.display = "none";
   } else {
     fullNameError.style.display = "block";
@@ -28,23 +28,15 @@ function validateContactForm() {
   } else {
     messageError.style.display = "block";
   }
-}
 
-form.addEventListener("submit", validateContactForm);
-
-function checkCharacterLength(value, length) {
-  if (value.trim().length > length) {
-    return true;
+  if (checkCharacterLength(subject.value, 0) === true) {
+    subjectError.style.display = "none";
   } else {
-    return false;
+    subjectError.style.display = "block";
   }
 }
 
-function validateEmail(email) {
-  const regEx = /\S+@\S+\.\S+/;
-  const patternMatches = regEx.test(email);
-  return patternMatches;
-}
+form.addEventListener("submit", validateContactForm);
 
 submitButton.onclick = function() {
   if (checkCharacterLength(fullName.value, 0) && (validateEmail(email.value) === true) && (checkCharacterLength(message.value, 10) === true)) {

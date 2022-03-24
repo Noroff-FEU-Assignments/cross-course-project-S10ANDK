@@ -128,7 +128,7 @@ form {
     margin: auto;
 }
 
-#security-code {
+#security-code-container {
     width: 50px;
     margin: 10px 0px;
 }
@@ -138,35 +138,40 @@ form {
     display: block;
 }
 
-#month {
-    /* margin: 0px; */
-}
-
-.cart-container {
-    display: none;
-    display: block;
-}
-
-.billing-details-container {
-    display: none;
-    display: block;
-}
-
-.card-information-container {
-    display: none;
-    display: block;
-}
-
 .month-year-info-container {
     display: flex;
     margin: 0px auto;
 }
 
+.month-year-info-container div {
+    margin: 0px auto;
+}
+
 .year-container {
     flex: 1;
-    margin: 0px auto;
+
 }
 
 .month-container {
     flex: 0.5;
+
+}
+
+.cart-container {
+    transition: ease-in-out .4s;
+}
+
+.billing-details-container {
+    display: none;
+    /* display: block; */
+    transition: ease-in-out .4s;
+}
+
+.card-information-container {
+    display: none;
+    /* display: block; */
+}
+
+#securityCodeError {
+    width: 250px;
 }

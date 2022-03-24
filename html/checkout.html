@@ -25,7 +25,7 @@
     <header>
         <div class="header-container">
             <div class="back_button">
-                <a href="#"><img src="assets/Back_Button.png" alt="Back button"></a>
+                <img src="../assets/back-button.png" alt="Back button">
             </div>
             <div class="logo">
                 <a href="../index.html"><img src="../assets/rainydays_Logo.png" class="rainydays-logo_image" alt="Rainydays logo"></a>
@@ -64,9 +64,9 @@
                 </div>
                 <p id="shipping-info">*Free shipping (more than £100.00)</p>
                 <p id="total-cost">Total cost: <span>£198.00<span</p>
-                <button type="button" class="cta checkout-now_button">Checkout now</button>
+                <button type="button" class="cta checkout-now_button" id="checkoutNowButton">Checkout now</button>
             </div>
-            <form class="billing-form">
+            <form class="billing-form" method="get">
                 <div class="billing-details-container">
                     <h3 class="form-header">Billing Details</h3>
                     <div>
@@ -89,6 +89,7 @@
                         </div>
                         <label for="country">Country</label>
                         <select id="country" id="country" name="country">
+                            <option></option>
                             <option value="Norway">Norway</option>
                             <option value="Norway">Sweden</option>
                             <option value="Norway">Denmark</option>
@@ -101,8 +102,15 @@
                             <option value="Norway">Scotland</option>
                             <option value="Norway">South Africa</option>
                         </select>
-                            <div class="form-error-message" id="zipError">
+                            <div class="form-error-message" id="countryError">
                                 Please select a country
+                            </div>
+                    </div>
+                    <div class="form-state-container">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address">
+                            <div class="form-error-message" id="addressError">
+                                Please enter a valid address
                             </div>
                     </div>
                     <div class="form-state-container">
@@ -113,17 +121,17 @@
                             </div>
                     </div>
                     <div>
-                        <label for="zip">Zip/Postal code</label>
-                        <input type="email" id="zip" name="zip">
-                        <div class="form-error-message" id="zipError">
-                            Please enter your zip or postal code
+                        <label for="postalCode">Postal code</label>
+                        <input type="text" id="postalCode" name="postalCode">
+                        <div class="form-error-message" id="postalCodeError">
+                            Please enter a valid postal code
                         </div>
                     </div>
                     <div>
                         <label for="number">Mobile number</label>
                         <input type="tel" id="number" name="number">
                         <div class="form-error-message" id="numberError">
-                            Mobile number is not valid
+                            Please enter a valid phone number
                         </div>
                     </div>
                     <div class="checkbox">
@@ -135,8 +143,8 @@
                 <div class="card-information-container">
                     <h3 class="form-header">Card Information</h3>
                     <div>
-                        <label for="card-number">Card number</label>
-                        <input type="tel" id="card-number" name="card-number">
+                        <label for="cardNumber">Card number</label>
+                        <input type="tel" id="cardNumber" name="cardNumber">
                             <div class="form-error-message" id="cardNumberError">
                                 Please enter a valid card number
                             </div>
@@ -145,6 +153,7 @@
                         <div class="month-container">
                             <label for="month">Month</label>
                             <select id="month" id="month" name="month">
+                                <option></option>
                                 <option value="01">01</option>
                                 <option value="02">02</option>
                                 <option value="03">03</option>
@@ -159,12 +168,13 @@
                                 <option value="12">12</option>
                             </select>
                                 <div class="form-error-message" id="monthError">
-                                    Please select correct month
+                                    Please select a month
                                 </div>
                         </div>
                         <div class="year-container">
                             <label for="year">Year</label>
                             <select id="year" id="year" name="year">
+                                <option></option>
                                 <option value="22">22</option>
                                 <option value="23">23</option>
                                 <option value="24">24</option>
@@ -174,13 +184,13 @@
                                 <option value="28">28</option>
                             </select>
                                 <div class="form-error-message" id="yearError">
-                                    Please select correct year
+                                    Please select a year
                                 </div>
                         </div>
                     </div>   
-                    <div id="security-code">
-                        <label for="security-code">Security code</label>
-                        <input type="tel" id="security-code" name="security-code">
+                    <div id="security-code-container">
+                        <label for="securityCode">Security code</label>
+                        <input type="tel" id="securityCode" name="securityCode">
                             <div class="form-error-message" id="securityCodeError">
                                 Please enter a valid security code (3 digits)
                             </div>
@@ -193,5 +203,7 @@
     <footer>
         <p>Copyright©</p>
     </footer>
+    <script src="../js/components/validation.js"></script>
+    <script src="../js/checkout.js"></script>
 </body>
 </html>

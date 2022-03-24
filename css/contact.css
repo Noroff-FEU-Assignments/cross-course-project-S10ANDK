@@ -29,3 +29,8 @@ textarea {
     display: none;
     margin-top: 20px;
 }
+
+#subject {
+    display: block;
+    width: 60%;
+}

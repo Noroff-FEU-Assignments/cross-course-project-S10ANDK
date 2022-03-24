@@ -1,0 +1,4 @@
+onclick="location.href=`checkout-success.html`"
+
+regex source: https://gist.github.com/jacksonfdam/3000275 & https://digitalfortress.tech/tips/top-15-commonly-used-regex/
+
