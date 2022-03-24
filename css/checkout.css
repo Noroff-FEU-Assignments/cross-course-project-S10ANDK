@@ -76,11 +76,11 @@ h2 {
 
 .checkout-now_button,
 .purchase_button {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     display: block;
-    width: 250px;
-    height: 60px;
+    width: 220px;
+    height: 50px;
     background-color: #FF6254;
     border-radius: 30px;
     margin: 30px auto 20px;
@@ -88,9 +88,9 @@ h2 {
 }
 
 .checkout-nav {
-    font-size: 1.3rem;
-    width: 270px;
-    height: 60px;
+    font-size: 1.1rem;
+    width: 220px;
+    height: 50px;
     border: none;
     border-radius: 30px;
     margin: 50px auto;
@@ -129,11 +129,44 @@ form {
 }
 
 #security-code {
-    width: 50%;
+    width: 50px;
     margin: 10px 0px;
 }
 
 #year,
 #month {
     display: block;
+}
+
+#month {
+    /* margin: 0px; */
+}
+
+.cart-container {
+    display: none;
+    display: block;
+}
+
+.billing-details-container {
+    display: none;
+    display: block;
+}
+
+.card-information-container {
+    display: none;
+    display: block;
+}
+
+.month-year-info-container {
+    display: flex;
+    margin: 0px auto;
+}
+
+.year-container {
+    flex: 1;
+    margin: 0px auto;
+}
+
+.month-container {
+    flex: 0.5;
 }
