@@ -64,7 +64,7 @@
                 </div>
                 <p id="shipping-info">*Free shipping (more than £100.00)</p>
                 <p id="total-cost">Total cost: <span>£198.00<span</p>
-                <button type="button" class="cta checkout-now_button" id="checkoutNowButton">Checkout now</button>
+                <button type="button" class="cta checkout-now_button" id="checkoutNowButton" alt="Checkout now button">Checkout now</button>
             </div>
             <form class="billing-form" method="get">
                 <div class="billing-details-container">
@@ -137,7 +137,7 @@
                     <div class="checkbox">
                         <input type="checkbox" name="newsletter" id="newsletter">
                         <label for="newsletter">Sign up for our newsletter.</label>
-                        <button type="button" class="cta checkout-nav">Next: Card information</button>
+                        <button type="button" class="cta checkout-nav" alt="Card information button">Next: Card information</button>
                     </div>
                 </div>
                 <div class="card-information-container">
@@ -146,7 +146,7 @@
                         <label for="cardNumber">Card number</label>
                         <input type="tel" id="cardNumber" name="cardNumber">
                             <div class="form-error-message" id="cardNumberError">
-                                Please enter a valid card number
+                                Please enter a valid card number. (Make sure to include 16 digits, and remove any spacing between digits)
                             </div>
                     </div>
                     <div class="month-year-info-container">
@@ -195,7 +195,9 @@
                                 Please enter a valid security code (3 digits)
                             </div>
                     </div>
-                    <button type="submit" class="cta purchase_button">Confirm purchase</button>
+                    <div class="purchase-button-container">
+                        <button type="submit" value="submit" class="cta purchase_button" id="purchaseButton" alt="Purchase button">Confirm purchase</button>
+                    </div>
                 </div>
             </form>
         </section>

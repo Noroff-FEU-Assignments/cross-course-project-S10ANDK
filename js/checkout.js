@@ -3,7 +3,8 @@ const backButton = document.querySelector(".back_button");
 const cartIconButton = document.querySelector(".checkout-button");
 const checkoutNowButton = document.querySelector("#checkoutNowButton");
 const cardInformationButton = document.querySelector(".checkout-nav");
-const confirmPurchaseButton = document.querySelector(".purchase_button");
+const confirmPurchaseButton = document.querySelector("#purchaseButton");
+const confirmPurchaseButtonContainer = document.querySelector(".purchase-button-container");
 const cartDetails = document.querySelector(".cart-container");
 const billingDetails = document.querySelector(".billing-details-container");
 const cardInformation = document.querySelector(".card-information-container");
@@ -45,7 +46,7 @@ function validateCheckoutForm() {
     emailError.style.display = "block";
   }
 
-  if (checkCharacterLength(country.value, 0) === true) {
+  if (checkCharacterLength(country.value, 0)) {
     countryError.style.display = "none";
   } else {
     countryError.style.display = "block";
@@ -63,7 +64,10 @@ function validateCheckoutForm() {
     stateError.style.display = "block";
   }
 
-  if (validateNumber(postalCode.value) === true && (checkCharacterLength(postalCode.value, 3) === true)) {
+  if (
+    validateNumber(postalCode.value) === true &&
+    checkCharacterLength(postalCode.value, 3) === true
+  ) {
     postalCodeError.style.display = "none";
   } else {
     postalCodeError.style.display = "block";
@@ -75,7 +79,10 @@ function validateCheckoutForm() {
     numberError.style.display = "block";
   }
 
-  if (validateNumber(cardNumber.value) === true && (checkCharacterLength(cardNumber.value, 3) === true)) {
+  if (
+    validateNumber(cardNumber.value) === true &&
+    checkCharacterLength(cardNumber.value, 15) === true
+  ) {
     cardNumberError.style.display = "none";
   } else {
     cardNumberError.style.display = "block";
@@ -93,7 +100,10 @@ function validateCheckoutForm() {
     yearError.style.display = "block";
   }
 
-  if (validateNumber(securityCode.value) === true && (checkCharacterLength(securityCode.value, 2) === true)) {
+  if (
+    validateNumber(securityCode.value) === true &&
+    checkCharacterLength(securityCode.value, 2) === true
+  ) {
     securityCodeError.style.display = "none";
   } else {
     securityCodeError.style.display = "block";
@@ -102,19 +112,39 @@ function validateCheckoutForm() {
 
 checkoutForm.addEventListener("submit", validateCheckoutForm);
 
+function checkoutFormValidationSuccess() {
+  if (checkCharacterLength(fullName.value, 0) && (validateEmail(email.value) === true) && (checkCharacterLength(country.value, 0)) && (checkCharacterLength(address.value, 0) === true) && (checkCharacterLength(state.value, 0) === true) && (validateNumber(postalCode.value) === true &&
+  checkCharacterLength(postalCode.value, 3) === true) && (validatePhoneNumber(number.value) === true) && (validateNumber(cardNumber.value) === true && checkCharacterLength(cardNumber.value, 15) === true) 
+  && (checkCharacterLength(month.value, 0) === true) && (checkCharacterLength(year.value, 0) === true) && (validateNumber(securityCode.value) === true && checkCharacterLength(securityCode.value, 2) === true)) {
+    confirmPurchaseButtonContainer.innerHTML = `<button type="submit" onclick="window.location.href='checkout-success.html'" class="cta purchase_button" id="purchaseButton">Confirm purchase</button>`;
+  }
+}
+
+checkoutFormValidationSuccess()
+
+checkoutForm.addEventListener("click", checkoutFormValidationSuccess);
+
 checkoutNowButton.onclick = function () {
   cartDetails.style.display = "none";
-  billingDetails.style.transition = "ease-in 1s";
   billingDetails.style.display = "block";
   backButton.style.visibility = "visible";
   backButton.innerHTML = `<a href="checkout.html"><img src="../assets/back-button.png" alt="Back button"></a>`;
 };
 
 cardInformationButton.onclick = function () {
-  billingDetails.style.display = "none";
-  cardInformation.style.display = "block";
-  backButton.style.visibility = "visible";
-  backButton.innerHTML = `<img src="../assets/back-button.png" alt="Back button">`;
+  if (checkCharacterLength(fullName.value, 0) && (validateEmail(email.value) === true) && (checkCharacterLength(country.value, 0)) && (checkCharacterLength(address.value, 0) === true) && (checkCharacterLength(state.value, 0) === true) && (validateNumber(postalCode.value) === true &&
+  checkCharacterLength(postalCode.value, 3) === true) && (validatePhoneNumber(number.value) === true)) {
+    cardNumberError.style.display = "none";
+    monthError.style.display = "none";
+    yearError.style.display = "none";
+    securityCodeError.style.display = "none";
+    billingDetails.style.display = "none";
+    cardInformation.style.display = "block";
+    backButton.style.visibility = "visible";
+    backButton.innerHTML = `<img src="../assets/back-button.png" alt="Back button">`;
+  } else {
+    validateCheckoutForm();
+  }
 
   backButton.onclick = function () {
     billingDetails.style.display = "block";
