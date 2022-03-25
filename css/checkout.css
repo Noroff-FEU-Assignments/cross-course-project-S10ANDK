@@ -149,22 +149,15 @@ form {
 
 .year-container {
     flex: 1;
-
 }
 
 .month-container {
     flex: 0.5;
-
-}
-
-.cart-container {
-    transition: ease-in-out .4s;
 }
 
 .billing-details-container {
     display: none;
     /* display: block; */
-    transition: ease-in-out .4s;
 }
 
 .card-information-container {
