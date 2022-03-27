@@ -43,7 +43,8 @@
         height: auto;
     }
 
-    .back_button {
+    .back_button,
+    .add-to-cart_button:hover {
         cursor: pointer;
     }
     
