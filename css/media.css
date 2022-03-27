@@ -21,6 +21,9 @@
         margin: 20px 10%;
     }
 
+    .billing-form {
+        max-width: 90%;
+    }
 }
 
 @media (min-width: 650px) {
@@ -71,6 +74,10 @@
         max-width: 1000px;
         margin: 0 auto;
         border-radius: 0;
+    }
+
+    .billing-form {
+        max-width: 70%;
     }
 
     /* Home page media querys */

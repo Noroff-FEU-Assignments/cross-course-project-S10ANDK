@@ -78,7 +78,6 @@ h2 {
 .purchase_button {
     font-size: 1.3rem;
     font-weight: 600;
-    display: block;
     width: 220px;
     height: 50px;
     background-color: #FF6254;
@@ -94,6 +93,12 @@ h2 {
     border: none;
     border-radius: 30px;
     margin: 50px auto;
+}
+
+.purchase-button-container {
+    width: 200px;
+    text-align: center;
+    margin: auto;
 }
 
 .purchase_button,
@@ -123,8 +128,8 @@ textarea {
     display: inline;
 }
 
-form {
-    max-width: 65%;
+.billing-form {
+    max-width: 100%;
     margin: auto;
 }
 
@@ -136,6 +141,7 @@ form {
 #year,
 #month {
     display: block;
+    width: 60px;
 }
 
 .month-year-info-container {
@@ -157,12 +163,10 @@ form {
 
 .billing-details-container {
     display: none;
-    /* display: block; */
 }
 
 .card-information-container {
     display: none;
-    /* display: block; */
 }
 
 #securityCodeError {

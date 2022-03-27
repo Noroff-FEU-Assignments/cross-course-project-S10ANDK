@@ -6,14 +6,6 @@ function checkCharacterLength(value, length) {
   }
 }
 
-function checkCharacterLengthCard(value, length) {
-    if (value.trim().length > length) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
 function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatchingEmail = regEx.test(email);

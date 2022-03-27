@@ -7,6 +7,7 @@ const message = document.querySelector("#message");
 const messageError = document.querySelector("#messageError");
 const contactUsSuccess = document.querySelector(".contact-us-success");
 const submitButton = document.querySelector("#submitButton");
+const contactUsHeader = document.querySelector("#contact-us_header");
 
 function validateContactForm() {
   event.preventDefault();
@@ -39,7 +40,8 @@ function validateContactForm() {
 form.addEventListener("submit", validateContactForm);
 
 submitButton.onclick = function() {
-  if (checkCharacterLength(fullName.value, 0) && (validateEmail(email.value) === true) && (checkCharacterLength(message.value, 10) === true)) {
+  if (checkCharacterLength(fullName.value, 0) && (validateEmail(email.value) === true) && (checkCharacterLength(message.value, 9) === true) && (checkCharacterLength(subject.value, 0) === true)) {
+    contactUsHeader.innerHTML = "Thank you!";
     contactUsSuccess.style.display = "block";
     form.style.display = "none";
   }

@@ -146,14 +146,8 @@ function checkoutFormValidationSuccess() {
   checkCharacterLength(postalCode.value, 3) === true) && (validatePhoneNumber(number.value) === true) && (validateNumber(cardNumber.value) === true && checkCharacterLength(cardNumber.value, 15) === true) 
   && (checkCharacterLength(month.value, 0) === true) && (checkCharacterLength(year.value, 0) === true) && (validateNumber(securityCode.value) === true && checkCharacterLength(securityCode.value, 2) === true)) {
     confirmPurchaseButtonContainer.innerHTML = `<button type="submit" onclick="window.location.href='checkout-success.html'" class="cta purchase_button" id="purchaseButton">Confirm purchase</button>`;
-    console.log("if");
-  } else {
-    console.log("else");
-    confirmPurchaseButton.style.background = "#9c58f";
-  }
+  } 
 }
-
-checkoutFormValidationSuccess();
 
 checkoutForm.addEventListener("mousemove", checkoutFormValidationSuccess);
 
