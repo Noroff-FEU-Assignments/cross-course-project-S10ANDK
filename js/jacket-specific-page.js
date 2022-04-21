@@ -14,5 +14,18 @@ function previousButtonState() {
     addToCartButton.style.transition = "ease-in 0.3s"
 }
 
+const queryString = document.location.search;
+
+console.log(queryString);
+
+const parameters = new URLSearchParams(queryString);
+
+console.log(parameters);
+
+const id = parameters.get("id");
+
+const consumerAndDeveloperKey = "?consumer_key=ck_3f0c413d964294d247e87393b91409f961b66d0e&consumer_secret=cs_789e23ccbfdee031a1568c8e25164bc3c7e2f24b";
+
+const url = "https://stiankornbakk.online/wordpress/wp-json/wc/v3/products/" + id + consumerAndDeveloperKey;
 
 
