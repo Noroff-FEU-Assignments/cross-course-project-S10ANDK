@@ -157,7 +157,7 @@ nav ul {
 .main-headings,
 .about_h1 {
     background-color: #FCFEFC;
-    padding: 5px 40px 40px;
+    padding: 30px 40px 40px;
     margin: 20px 5% 0px;
     border-radius: 5px 5px 0 0;
 } 
@@ -217,6 +217,24 @@ select {
     margin-bottom: 10px;
 }
 
+.error-message {
+    text-align: center;
+    font-size: large;
+    margin: auto;
+    color: rgb(119, 11, 11);
+}
+
+.loader-indicator {
+    text-align: center;
+    margin: 50px auto;
+    border: 5px solid #FFDD15;
+    border-radius: 20%;
+    width: 30px;
+    height: 30px;
+    animation: rotate 1.5s linear infinite;
+    flex: 10;
+}
+
 footer {
     background-color: var(--color-nav-footer);
     text-align: center;
@@ -226,4 +244,9 @@ footer {
 
 footer p {
     color: #FCFEFC;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

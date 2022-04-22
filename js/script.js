@@ -15,7 +15,7 @@ function generateHtml(name) {
   name.forEach(function (results) {
     container.innerHTML += `<a href="../products/jacket-specific-page.html?id=${results.id}">
         <img src="${results.images[0].src}" class="jackets-listed_image">                            
-        <h3>${results.name}<h3>
+        <h3>${results.name}</h3>
         <p class="price">${results.prices.price} kr</p>
         </a>`;
   });

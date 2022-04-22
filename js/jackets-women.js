@@ -11,9 +11,9 @@ async function executeApiCall() {
     container.innerHTML = "";
 
     generateHtml(results);
-  } catch (error) {
+  } catch {
     console.log("An error has occured");
-    container.innerHTML = "An error has occured";
+    container.innerHTML = errorMessage("An error has occured");
   }
 }
 

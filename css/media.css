@@ -322,6 +322,7 @@
     .jacket-specific-container {
         flex-direction: row;
         padding-top: 30px;
+        padding-bottom: 90px;
     }
 
     .add-to-cart_button {
