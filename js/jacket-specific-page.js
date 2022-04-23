@@ -24,7 +24,7 @@ async function fetchProduct() {
     const response = await fetch(url);
     const details = await response.json();
 
-    // console.log(details);
+    console.log(details);
 
     detailsContainer.innerHTML = "";
 
@@ -42,11 +42,62 @@ async function fetchProduct() {
                                         <div class="jacket-specific">
                                         <p>${details.description}</p>
                                         <p class="price">Price: <span>${details.prices.price} kr</span></p>
-                                        <p>${details.is_in_stock}</p>
+                                        <p class="stock">${details.is_in_stock}</p>
                                         <p>${details.variations[0].attributes[0].value}</p>
-                                        <p>${details.add_to_cart.text}</p>
+                                        <a class="cta add-to-cart_button">Add to Cart</a>
+                                        <a href="../html/checkout.html" class="cta buy-now_button">Buy Now</a>
                                         </div>
                                       </div>`;
+    if (details.is_in_stock === true) {
+      const stock = document.querySelector(".stock");
+      stock.innerHTML = "";
+      stock.innerHTML = "In stock";
+      stock.style.color = "green";
+    } else {
+      const stock = document.querySelector(".stock");
+      stock.innerHTML = "";
+      stock.innerHTML = "Out of stock";
+      stock.style.color = "red";
+    }
+
+    const infoUrl = "https://stiankornbakk.online/wordpress/wp-json/wc/v3/products/" + id + "/variations" + consumerAndDeveloperKey;
+
+    const infoContainer = document.querySelector(".info");
+
+    async function fetchProductInfo() {
+      try {
+        const responseInfo = await fetch(infoUrl);
+        const info = await responseInfo.json();
+
+        console.log(info);
+
+        infoContainer.innerHTML = "";
+
+        infoContainer.innerHTML += `<p>Stock: ${info[0].stock_status}</p>`;
+                                    
+      } catch {
+        console.log("An error has occured");
+        detailsContainer.innerHTML = "An error has occured";
+      }
+    }
+
+    fetchProductInfo();
+
+    const addToCartButton = document.querySelector(".add-to-cart_button");
+
+    addToCartButton.onclick = function() {
+    addToCartButton.style.background = "green";
+    addToCartButton.style.color = "#FFFFFF"
+    addToCartButton.innerHTML = "Item added!"
+    setTimeout(previousButtonState, 5000);
+  };
+  
+    function previousButtonState() {
+    addToCartButton.style.background = "#FFDD15";
+    addToCartButton.style.color = "#113340"
+    addToCartButton.innerHTML = "Add to Cart";
+    addToCartButton.style.transition = "ease-in 0.3s"
+  }
   } catch {
     console.log("An error has occured");
     detailsContainer.innerHTML = errorMessage("An error has occured");
@@ -54,44 +105,3 @@ async function fetchProduct() {
 }
 
 fetchProduct();
-
-// window.onload = function() {
-//   const addToCartButton = document.querySelector(".add-to-cart_button");
-
-//   addToCartButton.onclick = function() {
-//       addToCartButton.style.background = "green";
-//       addToCartButton.style.color = "#FFFFFF"
-//       addToCartButton.innerHTML = "Item added!"
-//       setTimeout(previousButtonState, 5000);
-//   };
-  
-//   function previousButtonState() {
-//       addToCartButton.style.background = "#FFDD15";
-//       addToCartButton.style.color = "#113340"
-//       addToCartButton.innerHTML = "Add to Cart";
-//       addToCartButton.style.transition = "ease-in 0.3s"
-//   }
-// }
-
-
-
-
-// const infoUrl = "https://stiankornbakk.online/wordpress/wp-json/wc/v3/products/" + id + "variations" + consumerAndDeveloperKey;
-
-// const infoContainer = document.querySelector(".info-container");
-
-// async function fetchProductInfo() {
-//   try {
-//     const responseInfo = await fetch(infoUrl);
-//     const info = await responseInfo.json();
-
-//     console.log(info);
-
-//     infoContainer.innerHTML = "";
-
-//     infoContainer.innerHTML = `<p>Stock: ${info.id.stock_quantity}</p>`;
-//   } catch {
-//     console.log("An error has occured");
-//     detailsContainer.innerHTML = "An error has occured";
-//   }
-// }

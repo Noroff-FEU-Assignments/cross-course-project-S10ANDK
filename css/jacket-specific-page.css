@@ -56,6 +56,7 @@ h3 {
 }
 
 .add-to-cart_button {
+    /* display: none; */
     background-color: #FFDD15;
     color: #113340;
     margin: 10px auto;
