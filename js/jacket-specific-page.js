@@ -1,5 +1,3 @@
-
-
 const queryString = document.location.search;
 
 // console.log(queryString);
@@ -43,18 +41,27 @@ async function fetchProduct() {
                                         <p>${details.description}</p>
                                         <p class="price">Price: <span>${details.prices.price} kr</span></p>
                                         <p class="stock">${details.is_in_stock}</p>
-                                        <p>${details.variations[0].attributes[0].value}</p>
+                                        <div class="size-container">
+                                        <select class="cta size-selection">
+                                          <option value="148">Small</option>
+                                          <option value="147">Medium</option>
+                                          <option value="146">Large</option>
+                                          <option value="145">XL</option>
+                                          <option value="144">XXL</option>
+                                        </select>
+                                        </div>
                                         <a class="cta add-to-cart_button">Add to Cart</a>
                                         <a href="../html/checkout.html" class="cta buy-now_button">Buy Now</a>
                                         </div>
                                       </div>`;
-    if (details.is_in_stock === true) {
-      const stock = document.querySelector(".stock");
+
+    const stock = document.querySelector(".stock");
+
+    if (details.is_in_stock === true) {     
       stock.innerHTML = "";
       stock.innerHTML = "In stock";
       stock.style.color = "green";
-    } else {
-      const stock = document.querySelector(".stock");
+    } else {      
       stock.innerHTML = "";
       stock.innerHTML = "Out of stock";
       stock.style.color = "red";
@@ -62,7 +69,7 @@ async function fetchProduct() {
 
     const infoUrl = "https://stiankornbakk.online/wordpress/wp-json/wc/v3/products/" + id + "/variations" + consumerAndDeveloperKey;
 
-    const infoContainer = document.querySelector(".info");
+    // const infoContainer = document.querySelector(".info");
 
     async function fetchProductInfo() {
       try {
@@ -71,13 +78,11 @@ async function fetchProduct() {
 
         console.log(info);
 
-        infoContainer.innerHTML = "";
+        const sizeSelection = document.querySelector(".size-selection");
 
-        infoContainer.innerHTML += `<p>Stock: ${info[0].stock_status}</p>`;
-                                    
       } catch {
         console.log("An error has occured");
-        detailsContainer.innerHTML = "An error has occured";
+        detailsContainer.innerHTML = errorMessage("An error has occured");
       }
     }
 

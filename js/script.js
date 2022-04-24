@@ -8,17 +8,32 @@ const consumerAndDeveloperKey =
 
 const databaseUnlockedUrl = databaseUrl + consumerAndDeveloperKey;
 
-// console.log(databaseUnlockedUrl);
-
 function generateHtml(name) {
   console.log(name);
   name.forEach(function (results) {
     container.innerHTML += `<a href="../products/jacket-specific-page.html?id=${results.id}">
         <img src="${results.images[0].src}" class="jackets-listed_image">                            
         <h3>${results.name}</h3>
-        <p class="price">${results.prices.price} kr</p>
+        <div class="price-stock-container">
+        <p class="price price-flex">${results.prices.price} kr</p>
+        <p class="stock stock-flex">${results.is_in_stock}</p>
+        </div>
         </a>`;
+
+        if (results.is_in_stock === true) {
+          const stock = document.querySelector(".stock");
+          stock.innerHTML = "";
+          stock.innerHTML = "In stock";
+          stock.style.color = "green";
+        } else {
+          const stock = document.querySelector(".stock");
+          stock.innerHTML = "";
+          stock.innerHTML = "Out of stock";
+          stock.style.color = "red";
+        }
   });
 }
 
 generateHtml();
+
+

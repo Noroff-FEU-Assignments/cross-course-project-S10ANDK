@@ -91,3 +91,19 @@ h3 {
 .jacket-specific h2 {
     max-width: 300px;
 }
+
+.size-container {
+    width: 120px;
+    text-align: center;
+    padding: 0px 0px 50px;
+    margin: auto;
+}
+
+.jacket-specific_description {
+    padding-bottom: 20px;
+}
+
+.size-selection {
+    text-align: left;
+    min-width: 120px;
+}
