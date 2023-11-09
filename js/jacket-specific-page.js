@@ -1,10 +1,6 @@
 const queryString = document.location.search;
 
-// console.log(queryString);
-
 const parameters = new URLSearchParams(queryString);
-
-// console.log(parameters);
 
 const consumerAndDeveloperKey =
   "?consumer_key=ck_3f0c413d964294d247e87393b91409f961b66d0e&consumer_secret=cs_789e23ccbfdee031a1568c8e25164bc3c7e2f24b";
@@ -71,12 +67,10 @@ async function fetchProduct() {
     }
 
     const infoUrl =
-      "https://stiankornbakk.online/wordpress/wp-json/wc/v3/products/" +
+      "https://stiankornbakk.com/databases/wp-json/wc/v3/products/" +
       id +
       "/variations" +
       consumerAndDeveloperKey;
-
-    // const infoContainer = document.querySelector(".info");
 
     async function fetchProductInfo() {
       try {
