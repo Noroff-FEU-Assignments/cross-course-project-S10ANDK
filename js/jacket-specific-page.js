@@ -6,12 +6,15 @@ const parameters = new URLSearchParams(queryString);
 
 // console.log(parameters);
 
-const consumerAndDeveloperKey = "?consumer_key=ck_3f0c413d964294d247e87393b91409f961b66d0e&consumer_secret=cs_789e23ccbfdee031a1568c8e25164bc3c7e2f24b";
+const consumerAndDeveloperKey =
+  "?consumer_key=ck_3f0c413d964294d247e87393b91409f961b66d0e&consumer_secret=cs_789e23ccbfdee031a1568c8e25164bc3c7e2f24b";
 
 const id = parameters.get("id");
 
 const url =
-  "https://stiankornbakk.online/wordpress/wp-json/wc/store/products/" + id + consumerAndDeveloperKey;
+  "https://stiankornbakk.com/databases/wp-json/wc/store/products/" +
+  id +
+  consumerAndDeveloperKey;
 
 const detailsContainer = document.querySelector(".product-container");
 
@@ -57,17 +60,21 @@ async function fetchProduct() {
 
     const stock = document.querySelector(".stock");
 
-    if (details.is_in_stock === true) {     
+    if (details.is_in_stock === true) {
       stock.innerHTML = "";
       stock.innerHTML = "In stock";
       stock.style.color = "green";
-    } else {      
+    } else {
       stock.innerHTML = "";
       stock.innerHTML = "Out of stock";
       stock.style.color = "red";
     }
 
-    const infoUrl = "https://stiankornbakk.online/wordpress/wp-json/wc/v3/products/" + id + "/variations" + consumerAndDeveloperKey;
+    const infoUrl =
+      "https://stiankornbakk.online/wordpress/wp-json/wc/v3/products/" +
+      id +
+      "/variations" +
+      consumerAndDeveloperKey;
 
     // const infoContainer = document.querySelector(".info");
 
@@ -79,7 +86,6 @@ async function fetchProduct() {
         console.log(info);
 
         const sizeSelection = document.querySelector(".size-selection");
-
       } catch {
         console.log("An error has occured");
         detailsContainer.innerHTML = errorMessage("An error has occured");
@@ -90,19 +96,19 @@ async function fetchProduct() {
 
     const addToCartButton = document.querySelector(".add-to-cart_button");
 
-    addToCartButton.onclick = function() {
-    addToCartButton.style.background = "green";
-    addToCartButton.style.color = "#FFFFFF"
-    addToCartButton.innerHTML = "Item added!"
-    setTimeout(previousButtonState, 5000);
-  };
-  
+    addToCartButton.onclick = function () {
+      addToCartButton.style.background = "green";
+      addToCartButton.style.color = "#FFFFFF";
+      addToCartButton.innerHTML = "Item added!";
+      setTimeout(previousButtonState, 5000);
+    };
+
     function previousButtonState() {
-    addToCartButton.style.background = "#FFDD15";
-    addToCartButton.style.color = "#113340"
-    addToCartButton.innerHTML = "Add to Cart";
-    addToCartButton.style.transition = "ease-in 0.3s"
-  }
+      addToCartButton.style.background = "#FFDD15";
+      addToCartButton.style.color = "#113340";
+      addToCartButton.innerHTML = "Add to Cart";
+      addToCartButton.style.transition = "ease-in 0.3s";
+    }
   } catch {
     console.log("An error has occured");
     detailsContainer.innerHTML = errorMessage("An error has occured");
